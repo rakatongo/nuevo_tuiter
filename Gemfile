@@ -37,6 +37,8 @@ end
 group :test do
 	gem 'capybara'
 	gem 'factory_girl_rails'
+	gem 'rb-inotify'
+	gem 'libnotify'
 	gem 'cucumber-rails', require: false
 	gem 'database_cleaner'
 end

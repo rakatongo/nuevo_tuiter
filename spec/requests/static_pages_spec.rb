@@ -11,6 +11,10 @@ describe "StaticPages" do
     	visit '/static_pages/home'
     	page.should have_selector('title', text:"Home")
     end
+    #it "should not have a custom page title" do
+     # visit '/static_pages/home'
+      #page.should_not have_selector('title',text: '| Home')
+    #end
   end
 
   describe "Help page" do 
@@ -24,7 +28,7 @@ describe "StaticPages" do
   	end
   end
 
-  describe "Contact Page" do 
+  describe "About Us" do 
   	it "should have the content 'About Us'"  do
   		visit '/static_pages/about'
   		page.should have_selector('h1', text: 'About Us')
@@ -32,6 +36,17 @@ describe "StaticPages" do
   	it "should have the title 'About Us' "do
   		visit '/static_pages/about'
   		page.should have_selector('title', text: "About Us")
+  	end
+  end
+
+  describe "Contact Us" do
+  	it "should have the title 'Contact Us'" do
+  		visit '/static_pages/contact'
+  		page.should have_selector('title', text: 'Contact Us')
+  	end
+  	it "should have the h1 selector filled with 'Contact Us'" do
+  		visit '/static_pages/contact'
+  		page.should have_selector('h1', text: "Contact Us")
   	end
   end
 
